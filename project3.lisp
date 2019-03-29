@@ -9,7 +9,10 @@
 ;   SETS
 
 ; Set membership
+(defun member())
+
 ; Insert element into set
+(defun insert())
 
 ;   MATH
 
