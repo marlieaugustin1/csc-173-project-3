@@ -35,7 +35,25 @@
     
 ; Check if subset or equal
     
-
+(print "  SET FUNCTIONS  ")
+(terpri)
+(print "Member function:")
+(terpri)
+(print "(member 'a '(b c a d)) => ")
+(print (member 'a '(b c a d)))
+(terpri)
+(print "(member 'x '(b c a d)) =>")
+(print (member 'x '(b c a d)))
+(terpri)
+(print "Insert element into set function")
+(terpri)
+(print "(insert 'a '(b c d)) => ")
+(print (insert 'a '(b c d)))
+(terpri)
+(print "(insert 'a '(a b c d)) =>")
+(print (insert 'a '(a b c d)))
+(terpri)
+    
 ;   MATH
 
 ; Absolute value
@@ -59,7 +77,30 @@
 ; LCM
     
 ; Prime
-   
+ 
+ (terpri)
+(print "  MATH FUNCTIONS  ")
+(terpri)
+(print "Absolute value function: ")
+(terpri)
+(print "(absolute 7) => ")
+(print (absolute 7))
+(terpri)
+(print "(absolute -7) => ")
+(print (absolute -7))
+(terpri)
+(print "Factorial function: ")
+(terpri)
+(print "(factorial 5) => ")
+(print (factorial 5))
+(terpri)
+(print "Nth Fibonacci number function: ")
+(print "(nth-fibo 6) => ")
+(print (nth-fibo 6))
+(terpri)
+(print "(nth-fibo 10) => ")
+(print (nth-fibo 10))
+(terpri)
 
  ;   REQUIRED
 
