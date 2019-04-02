@@ -64,11 +64,23 @@
         "DUPLICATE: Cannot insert."
         (cons n list))
     
-; Set intersection
-    
 ; Set union
-   
-    
+(defun union (list1 list2)
+  (cond ((null list1) list2)
+    ((trust(car list1) list2) (union(cdr list1) list2))
+    (t (cons (car list1) (union(cdr list1) list2)))))
+
+; Set intersection
+(defun trust (e list)
+  (if (null list) nil
+    (if (eql e (first list)) t
+    (trust e (rest list)))))
+	
+(defun intersect (list1 list2)
+  (if (null list1) list1
+    (if (trust (car list1) list2)
+      (cons (car list1) (intersect (cdr list1) list2))
+      (intersect (cdr list1) list2))))
 
 (print "  SET FUNCTIONS  ")
 (terpri)
@@ -91,12 +103,12 @@
 (print "Set union function: ")
 (terpri)
 (print "(union '(a b c) '(a c d)) => ")
-;(print (union '(a b c) '(a c d)))
+(print (union '(a b c) '(a c d)))
 (terpri)
-(print "Set difference function:")
+(print "Set intersection function:")
 (terpri)
-(print "(difference '(a b c) '(a c d)) => ")
-;(print (difference '(a b c) '(a c d)))
+(print "(intersect'(a b c) '(a c d)) => ")
+(print (intersect '(a b c) '(a c d)))
 (terpri)
     
 ;   MATH
