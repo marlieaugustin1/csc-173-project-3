@@ -1,5 +1,18 @@
 (setq ext:*warn-on-redefinition* nil)
 
+;   LIST
+
+; Append
+
+; Reverse
+
+; Add an element to the end of a list
+
+; Index-of
+
+; Remove-all
+
+
 ;   SETS
 
 ; Set membership
@@ -15,6 +28,13 @@
     (if (member n list)
         "DUPLICATE: Cannot insert."
         (cons n list))
+    
+; Set intersection
+    
+; Set union
+    
+; Check if subset or equal
+    
 
 ;   MATH
 
@@ -34,7 +54,18 @@
         (if (= n 1) 1
             (+ (n-fib (- n 1)) (n-fib(- n 2))))))
 
+; GCD
+    
+; LCM
+    
+; Prime
+   
+
  ;   REQUIRED
 
 ; Check if a number is perfect
 (defun perfect(x))
+
+; Check if a number is abundant
+    
+; Check if a number is deficient
