@@ -118,11 +118,18 @@
         (if (= n 1) 1
             (+ (n-fib (- n 1)) (n-fib(- n 2))))))
 
+; Right triangle
+(defun right-tri(x y z) 
+ (if (or (eq (+(* x x) (* y y)) (* z z) ) (eq (+(* x x) (* z z)) (* y y) ) 
+ 	(eq (+(* y y) (* z z)) (* x x) ) ) t
+  	nil ))
 ; GCD
     
 ; LCM
-    
+  
 ; Prime
+
+	
  
 (terpri)
 (print "  MATH FUNCTIONS  ")
@@ -155,6 +162,14 @@
 (print "(nth-fibo 10) => ")
 (print (nth-fibo 10))
 (terpri)
+(print "Right triangle: ")
+(print "(right-tri 3 4 5) => ")
+(print (right-tri 3 4 5))
+(terpri)
+(print "(right-tri 1 2 3) => ")
+(print (right-tri 1 2 3))
+(terpri)
+
  ;   REQUIRED
 
 ; Check if a number is perfect
