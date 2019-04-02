@@ -18,8 +18,6 @@
 
 ; Add an element to the end of a list
 
-; Index-of
-
 ; Remove-all
 
 (terpri)
