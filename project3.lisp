@@ -5,6 +5,12 @@
 ; Append
 
 ; Reverse
+(defun reverse(l)
+	(if (null l)
+		nil
+		(append (reverse (cdr l))
+		(list (car l)))))
+
 
 ; Add an element to the end of a list
 
@@ -12,6 +18,14 @@
 
 ; Remove-all
 
+(terpri)
+(print " LIST FUNCTIONS ")
+(terpri)
+(print "Function to reverse a list: ")
+(terpri)
+(print "(reverse '(a b c d)) => ")
+(print (reverse '(a b c d)))
+(terpri)
 
 ;   SETS
 
