@@ -10,7 +10,20 @@
 
 (defun addToEnd (x list)
   (reverseList (cons x (reverse list)))
-)		
+)	
+
+(defun add3To (x)
+    (+ x 3)
+)
+
+(defun mapFunction (list)
+    (if (null list)
+        nil
+        (cons (add3 (first list))
+            (myMap (rest list))
+        )
+    )
+)	
 
 (defun rightTriangle (x y z) 
  (if (or (eq (+(* x x) (* y y)) (* z z) ) (eq (+(* x x) (* z z)) (* y y) ) 
@@ -18,19 +31,35 @@
   	(print "Valid right Triangle")
   	nil 
 	))
-(print "Check if 3 integers can be the lengths of the two sides and the hypotenuse of a right triangle (in that order)")
+
+
+(defun add3List (x)
+    (+ x 3)
+)
+
+(defun mapFunction (l)
+    (if (null l)
+        nil
+        (cons (add3List (first l))
+            (myMap (rest l))
+        )
+    )
+)
+
+(print "Map function to adds 3 to each element in a list")
 (terpri)
-(print "Input one side")
+(print "Input a list of numbers")
 (terpri)
-(setq s1 (read))
-(print "Input the second side")
+(setq list (read))
+(print (mapFunction list))
 (terpri)
-(setq s2 (read))
-(print "Input the hypotenuse")
-(terpri)
-(setq h (read))
-(print (rightTriangle s1 s2 h))
-(terpri)
+
+(defun remove-all-occurrences (lst elt)
+    (if (null lst)
+      nil
+      (if (equal (car lst) elt)
+        (remove-all-occurrences (cdr lst) elt)
+        (cons (car lst) (remove-all-occurrences (cdr lst) elt)))))
 
 
 
