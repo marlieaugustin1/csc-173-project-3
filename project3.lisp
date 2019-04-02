@@ -42,10 +42,10 @@
 (print "(addtoend 'd '(a b c)) => ")
 (print (addtoend 'd '(a b c)))
 (terpri)
-(print "Remove-all function: ")
+(print "Map function: ")
 (terpri)
-(print "(remove-all ’a ’(b a c a a d a)) => ")
-;(print (remove-all ’a ’(b a c a a d a)))
+(print "(map 'add3 '(1 2 3 4)  => ")
+;(print (map 'add3 '(1 2 3 4))
 (terpri)
 
 ;   SETS
@@ -67,8 +67,7 @@
 ; Set intersection
     
 ; Set union
-    
-; Check if subset or equal
+   
     
 
 (print "  SET FUNCTIONS  ")
@@ -123,13 +122,6 @@
  (if (or (eq (+(* x x) (* y y)) (* z z) ) (eq (+(* x x) (* z z)) (* y y) ) 
  	(eq (+(* y y) (* z z)) (* x x) ) ) t
   	nil ))
-; GCD
-    
-; LCM
-  
-; Prime
-
-	
  
 (terpri)
 (print "  MATH FUNCTIONS  ")
@@ -146,14 +138,6 @@
 (terpri)
 (print "(factorial 5) => ")
 (print (factorial 5))
-(terpri)
-(print "GCD Function: ")
-(print "(gcd 8 12) =>")
-;(print (gcd 8 12))
-(terpri)
-(print "LCM Function: ")
-(print "(lcm 4 6) => ")
-;(print (lcm 4 6))
 (terpri)
 (print "Nth Fibonacci number function: ")
 (print "(nth-fibo 6) => ")
