@@ -3,6 +3,10 @@
 ;   LIST
 
 ; Append
+(defun append(list1 list2)
+	(if (null list1)
+		list2
+		(cons (first list1)(append(rest list1) list2))))
 
 ; Reverse
 (defun reverse(l)
@@ -20,6 +24,12 @@
 
 (terpri)
 (print " LIST FUNCTIONS ")
+(terpri)
+(print "Append two lists: ")
+(terpri)
+(print "(append '(1 3 x a) '(4 2 b))")
+(terpri)
+(print (append '(1 3 x a) '(4 2 b)))
 (terpri)
 (print "Function to reverse a list: ")
 (terpri)
