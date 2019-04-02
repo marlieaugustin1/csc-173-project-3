@@ -17,6 +17,9 @@
 
 
 ; Add an element to the end of a list
+(defun addtoend (n list)
+  (reverse (cons n (reverse list)))
+)
 
 ; Remove-all
 
@@ -33,6 +36,16 @@
 (terpri)
 (print "(reverse '(a b c d)) => ")
 (print (reverse '(a b c d)))
+(terpri)
+(print "Add an element to the end of a list: ")
+(terpri)
+(print "(addtoend 'd '(a b c)) => ")
+(print (addtoend 'd '(a b c)))
+(terpri)
+(print "Remove-all function: ")
+(terpri)
+(print "(remove-all ’a ’(b a c a a d a)) => ")
+;(print (remove-all ’a ’(b a c a a d a)))
 (terpri)
 
 ;   SETS
@@ -57,6 +70,7 @@
     
 ; Check if subset or equal
     
+
 (print "  SET FUNCTIONS  ")
 (terpri)
 (print "Member function:")
@@ -74,6 +88,16 @@
 (terpri)
 (print "(insert 'a '(a b c d)) =>")
 (print (insert 'a '(a b c d)))
+(terpri)
+(print "Set union function: ")
+(terpri)
+(print "(union '(a b c) '(a c d)) => ")
+;(print (union '(a b c) '(a c d)))
+(terpri)
+(print "Set difference function:")
+(terpri)
+(print "(difference '(a b c) '(a c d)) => ")
+;(print (difference '(a b c) '(a c d)))
 (terpri)
     
 ;   MATH
@@ -100,7 +124,7 @@
     
 ; Prime
  
- (terpri)
+(terpri)
 (print "  MATH FUNCTIONS  ")
 (terpri)
 (print "Absolute value function: ")
@@ -116,6 +140,14 @@
 (print "(factorial 5) => ")
 (print (factorial 5))
 (terpri)
+(print "GCD Function: ")
+(print "(gcd 8 12) =>")
+;(print (gcd 8 12))
+(terpri)
+(print "LCM Function: ")
+(print "(lcm 4 6) => ")
+;(print (lcm 4 6))
+(terpri)
 (print "Nth Fibonacci number function: ")
 (print "(nth-fibo 6) => ")
 (print (nth-fibo 6))
@@ -123,11 +155,10 @@
 (print "(nth-fibo 10) => ")
 (print (nth-fibo 10))
 (terpri)
-
  ;   REQUIRED
 
 ; Check if a number is perfect
-(defun perfect(x))
+
 
 ; Check if a number is abundant
     
