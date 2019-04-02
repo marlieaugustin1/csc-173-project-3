@@ -7,7 +7,7 @@ Completed functions:
 
 LIST: 
 SET: member, insert
-MATH: absolute, factorial,
+MATH: absolute, factorial, nth-fibo
 REQUIRED: 
 
 All functions are in the project3.lisp file.
