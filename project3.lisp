@@ -21,7 +21,7 @@
   (reverse (cons n (reverse list)))
 )
 
-; Remove-all
+; Map
 
 (terpri)
 (print " LIST FUNCTIONS ")
@@ -166,11 +166,56 @@
 (print (right-tri 1 2 3))
 (terpri)
 
- ;   REQUIRED
+;   REQUIRED
 
-; Check if a number is perfect
+(defun divisorSum (start n sum integers)
+  (if (< n 1)  sum
+  (if (member (/ start n) integers)
+    (divisorSum start (- n 1) (+ sum (/ start n)) integers)
+    (divisorSum start (- n 1) sum integers))))
 
+(defun mod(i integers)
+  (if(< i 2) integers
+    (mod (- i 1) (cons i integers))))
 
-; Check if a number is abundant
-    
-; Check if a number is deficient
+(defun test (i)
+  (divisorSum i (- i 1) 1 (mod (- i 1) '())))
+
+; Perfect
+(defun perfect(n)
+  (if (= n (test n)) t nil))
+
+; Abundant
+(defun abundant (n)
+  (if (< n (test n)) t nil))
+
+; Deficient
+(defun deficient (n)
+  (if (> n (test n)) t nil))
+
+(print "  REQUIRED FUNCTIONS  ")
+(terpri)
+(print "Check if a number is perfect function: ")
+(terpri)
+(print "(perfect 5) => ")
+(print (perfect 5))
+(terpri)
+(print "(perfect 6) => ")
+(print (perfect 6))
+(terpri)
+(print "Check if a number is abundant function: ")
+(terpri)
+(print "(abundant 5) => ")
+(print (abundant 5))
+(terpri)
+(print "(abundant 12) => ")
+(print (abundant 12))
+(terpri)
+(print "Check if a number is deficient function: ")
+(terpri)
+(print "(deficient 5) => ")
+(print (deficient 5))
+(terpri)
+(print "(deficient 12) => ")
+(print (deficient 12))
+(terpri)
