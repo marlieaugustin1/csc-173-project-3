@@ -8,27 +8,20 @@
     )
 )
 
-
-(setf i 0)
-(defun indexOf(x l)
-	(when list
-		(if (char= (cdr l) x)
-			(print i)
-			(terpri))
-			(incf i 1)
-		(indexOf(x (cdr l)))))
-		
-(print "Function to check the index of an element")
+(defun addToEnd (x list)
+  (reverseList (cons x (reverse list)))
+)
+(print "Function to an element to the end of a list")
 (terpri)
-(print "Type in the element you want to check")
-(terpri)
-(setq el (read-char))
-(terpri)
-(print "Enter the list that it is a part of")
+(print "Type in a list you want the element to be added to")
 (terpri)
 (setq list (read))
 (terpri)
-(print (indexOf el list))
+(print "Enter the element")
+(terpri)
+(setq el (read))
+(terpri)
+(print (addToEnd el list))		
 
 
 (defun test (init)
