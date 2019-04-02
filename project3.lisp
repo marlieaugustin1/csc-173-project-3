@@ -27,6 +27,12 @@
 (defun factorial (n) 
    (if (= n 1) 1 
        (* n (factorial (- n 1)))))
+  
+; Fibonacci
+(defun nth-fibo(n)
+    (if (= n 0) 0
+        (if (= n 1) 1
+            (+ (n-fib (- n 1)) (n-fib(- n 2))))))
 
  ;   REQUIRED
 
