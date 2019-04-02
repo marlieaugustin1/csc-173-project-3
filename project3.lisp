@@ -1,18 +1,20 @@
 (setq ext:*warn-on-redefinition* nil)
 
-;   REQUIRED
-
-; Check if a number is perfect
-(defun perfect(x))
-
-
 ;   SETS
 
 ; Set membership
-(defun member())
+(defun member(n list)
+    (if (null list) 
+        nil 
+        (if (eql n (car list)) 
+            t
+            (member n (cdr list))))
 
 ; Insert element into set
-(defun insert())
+(defun insert(n list)
+    (if (member n list)
+        "DUPLICATE: Cannot insert."
+        (cons n list))
 
 ;   MATH
 
@@ -25,3 +27,8 @@
 (defun factorial (n) 
    (if (= n 1) 1 
        (* n (factorial (- n 1)))))
+
+ ;   REQUIRED
+
+; Check if a number is perfect
+(defun perfect(x))
